@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Wrapper from "./wrapper";
 import Card from "./card";
 import Form from "./form";
+import icon01 from "../images/icon-detailed-records.svg";
+import icon02 from "../images/icon-detailed-records.svg";
+import icon03 from "../images/icon-fully-customizable.svg";
 
 export const InformationStyled = styled.div`
   text-align: center;
@@ -39,19 +42,19 @@ function Information() {
 
         <div className="card-list">
           <Card
-            icon="/images/icon-detailed-records.svg"
+            icon={icon01}
             title="Brand Recognition"
             description="Boost your brand recognition with each click. Generic links don’t 
         mean a thing. Branded links help instil confidence in your content."
           />
           <Card
-            icon="/images/icon-detailed-records.svg"
+            icon={icon02}
             title="Detailed Records"
             description="Gain insights into who is clicking your links. Knowing when and where 
             people engage with your content helps inform better decisions."
           />
           <Card
-            icon="/images/icon-fully-customizable.svg"
+            icon={icon03}
             title="Fully Customizable"
             description="Improve brand awareness and content discoverability through customizable 
             links, supercharging audience engagement."

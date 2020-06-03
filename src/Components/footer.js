@@ -1,6 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Wrapper from "./wrapper";
+import logoWhite from "../images/logo-white.svg";
+import iconFacebook from "../images/icon-facebook.svg";
+import iconTwitter from "../images/icon-twitter.svg";
+import iconPinterest from "../images/icon-pinterest.svg";
+import iconInstagram from "../images/icon-instagram.svg";
 
 export const FooterStyled = styled.div`
   background: var(--very-dark-violet);
@@ -43,7 +48,7 @@ function Footer() {
     <FooterStyled>
       <Wrapper>
         <div className="logo">
-          <img src="/images/logo-white.svg" alt="logo-white" />
+          <img src={logoWhite} alt="logo-white" />
         </div>
 
         <div className="content">
@@ -75,16 +80,16 @@ function Footer() {
 
           <div className="social-links">
             <span>
-              <img src="/images/icon-facebook.svg" alt="icon-facebook" />
+              <img src={iconFacebook} alt="icon-facebook" />
             </span>
             <span>
-              <img src="/images/icon-twitter.svg" alt="icon-twitter" />
+              <img src={iconTwitter} alt="icon-twitter" />
             </span>
             <span>
-              <img src="/images/icon-pinterest.svg" alt="icon-pinterest" />
+              <img src={iconPinterest} alt="icon-pinterest" />
             </span>
             <span>
-              <img src="/images/icon-instagram.svg" alt="icon-instagram" />
+              <img src={iconInstagram} alt="icon-instagram" />
             </span>
           </div>
         </div>

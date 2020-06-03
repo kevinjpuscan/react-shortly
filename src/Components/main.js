@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Wrapper from "./wrapper";
 import BtnCta from "./btnCta";
+import imgBanner from "../images/illustration-working.svg";
 
 export const MainStyled = styled.div`
   min-height: 100vh;
@@ -46,7 +47,7 @@ function Main() {
     <MainStyled>
       <div className="content">
         <div className="img-banner">
-          <img src="/images/illustration-working.svg" alt="img-main" />
+          <img src={imgBanner} alt="img-main" />
         </div>
 
         <Wrapper>

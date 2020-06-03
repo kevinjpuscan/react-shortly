@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Wrapper from "./wrapper";
+import logo from "../images/logo.svg";
+import menu from "../images/menu.svg";
 
 export const HeaderStyled = styled.div`
   padding: 2em 0em 0.5em 0em;
@@ -25,9 +27,9 @@ function Header() {
     <HeaderStyled>
       <Wrapper>
         <div className="content-header">
-          <img src="%PUBLIC_URL%/images/logo.svg" alt="logo" />
+          <img src={logo} alt="logo" />
           <span className="icon-menu">
-            <img src="/images/menu.svg" alt="icon-menu" />
+            <img src={menu} alt="icon-menu" />
           </span>
         </div>
       </Wrapper>

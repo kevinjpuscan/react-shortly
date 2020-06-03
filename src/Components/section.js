@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import BtnCta from "./btnCta";
+import bgBoostMobile from "../images/bg-boost-mobile.svg";
 
 export const SectionStyled = styled.div`
   height: 300px;
@@ -8,7 +9,7 @@ export const SectionStyled = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  background-image: url("/images/bg-boost-mobile.svg");
+  background-image: url(${props => props.image});
   .content {
     width: 100%;
     display: flex;
@@ -25,7 +26,7 @@ export const SectionStyled = styled.div`
 
 function Section() {
   return (
-    <SectionStyled>
+    <SectionStyled image={bgBoostMobile}>
       <div className="content">
         <p className="text">
           <strong>Boost your links today</strong>
