@@ -25,7 +25,7 @@ function Header() {
     <HeaderStyled>
       <Wrapper>
         <div className="content-header">
-          <img src="/images/logo.svg" alt="logo" />
+          <img src="%PUBLIC_URL%/images/logo.svg" alt="logo" />
           <span className="icon-menu">
             <img src="/images/menu.svg" alt="icon-menu" />
           </span>

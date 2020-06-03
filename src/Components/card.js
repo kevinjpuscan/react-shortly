@@ -48,7 +48,7 @@ function Card({ icon, title, description }) {
   return (
     <CardStyled>
       <div className="icon">
-        <img src={icon} alt={title} />
+        <img src={`%PUBLIC_URL%${title}`} alt={title} />
       </div>
       <div className="content">
         <h1 className="title">{title}</h1>
