@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Wrapper from "./wrapper";
+import Nav from "./nav";
+
 import logo from "../images/logo.svg";
 import menu from "../images/menu.svg";
 
@@ -22,19 +24,34 @@ export const HeaderStyled = styled.div`
   }
 `;
 
-function Header() {
-  return (
-    <HeaderStyled>
-      <Wrapper>
-        <div className="content-header">
-          <img src={logo} alt="logo" />
-          <span className="icon-menu">
-            <img src={menu} alt="icon-menu" />
-          </span>
-        </div>
-      </Wrapper>
-    </HeaderStyled>
-  );
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false
+    };
+    this.handleClickMenu = this.handleClickMenu.bind(this);
+  }
+
+  handleClickMenu = () => {
+    console.log("funciona");
+    this.setState({ open: !this.state.open });
+  };
+  render() {
+    return (
+      <HeaderStyled>
+        <Wrapper>
+          <div className="content-header">
+            <img src={logo} alt="logo" />
+            {this.state.open && <Nav />}
+            <span className="icon-menu" onClick={this.handleClickMenu}>
+              <img src={menu} alt="icon-menu" />
+            </span>
+          </div>
+        </Wrapper>
+      </HeaderStyled>
+    );
+  }
 }
 
 export default Header;
