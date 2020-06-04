@@ -41,11 +41,17 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: true
+      open: false,
+      width: 0
     };
     this.handleClickMenu = this.handleClickMenu.bind(this);
   }
-
+  componentWillMount = () => {
+    this.setState({ width: window.innerWidth });
+    window.addEventListener("resize", () => {
+      this.setState({ width: window.innerWidth });
+    });
+  };
   handleClickMenu = () => {
     console.log("funciona");
     this.setState({ open: !this.state.open });
@@ -56,7 +62,7 @@ class Header extends React.Component {
         <Wrapper>
           <div className="content-header">
             <img src={logo} alt="logo" />
-            {this.state.open && <Nav />}
+            {(this.state.open || this.state.width >= 1200) && <Nav />}
             <span className="icon-menu" onClick={this.handleClickMenu}>
               <img src={menu} alt="icon-menu" />
             </span>
