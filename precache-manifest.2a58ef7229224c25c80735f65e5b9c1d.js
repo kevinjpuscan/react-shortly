@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4816dec2d9100c54699a48fb1c427089",
+    "revision": "879147dcbd3cdbf8f19a26c1ac1de965",
     "url": "/react-shortly/index.html"
   },
   {
-    "revision": "0442b70273858aab15be",
+    "revision": "1ecf8319220879c5110a",
     "url": "/react-shortly/static/css/main.367e869b.chunk.css"
   },
   {
-    "revision": "de8e01b02ccdf68928c4",
-    "url": "/react-shortly/static/js/2.1f22d343.chunk.js"
+    "revision": "18fedfb8e6cebd67a250",
+    "url": "/react-shortly/static/js/2.6d25c49e.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/react-shortly/static/js/2.1f22d343.chunk.js.LICENSE.txt"
+    "url": "/react-shortly/static/js/2.6d25c49e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0442b70273858aab15be",
-    "url": "/react-shortly/static/js/main.f10d5909.chunk.js"
+    "revision": "1ecf8319220879c5110a",
+    "url": "/react-shortly/static/js/main.c865364d.chunk.js"
   },
   {
     "revision": "952676b079efbb8204f5",
     "url": "/react-shortly/static/js/runtime-main.4ec272da.js"
+  },
+  {
+    "revision": "dc8b886b4cf2a2426a6664ad17ebf7f9",
+    "url": "/react-shortly/static/media/bg-boost-desktop.dc8b886b.svg"
   },
   {
     "revision": "47ef0c281d9e90c932dfd63faa38b94f",
