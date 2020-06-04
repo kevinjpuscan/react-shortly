@@ -5,6 +5,7 @@ html {
 }
 :root {
   --cyan: hsl(180, 66%, 49%);
+  --cyan-ligth: hsl(180, 54%, 65%);
   --dark-violet: hsl(257, 27%, 26%);
 
   --red: hsl(0, 87%, 67%);

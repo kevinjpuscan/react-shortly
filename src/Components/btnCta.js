@@ -6,6 +6,10 @@ export const BtnCtaStyled = styled.strong`
   border-radius: 25px;
   background: var(--cyan);
   color: white;
+  cursor: pointer;
+  &:hover {
+    background: var(--cyan-ligth);
+  }
 `;
 
 function BtnCta({ text }) {

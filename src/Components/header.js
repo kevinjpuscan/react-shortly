@@ -22,13 +22,26 @@ export const HeaderStyled = styled.div`
   .icon-menu {
     cursor: pointer;
   }
+
+  @media (min-width: 1200px) {
+    .icon-menu {
+      display: none;
+    }
+
+    .content-header {
+      position: relative;
+      display: grid;
+      grid-template-columns: 200px auto;
+      justify-content: normal;
+    }
+  }
 `;
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: true
     };
     this.handleClickMenu = this.handleClickMenu.bind(this);
   }

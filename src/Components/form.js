@@ -41,6 +41,10 @@ export const FormStyled = styled.div`
     font-weight: 700;
     justify-content: center;
   }
+
+  .btn-shorten:hover {
+    background: var(--cyan-ligth);
+  }
 `;
 
 function Form() {
