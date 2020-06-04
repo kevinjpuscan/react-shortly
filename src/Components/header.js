@@ -31,7 +31,7 @@ export const HeaderStyled = styled.div`
     .content-header {
       position: relative;
       display: grid;
-      grid-template-columns: 200px auto;
+      grid-template-columns: 130px auto;
       justify-content: normal;
     }
   }

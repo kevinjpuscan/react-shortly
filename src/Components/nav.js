@@ -80,14 +80,6 @@ export const NavStyled = styled.div`
       cursor: pointer;
     }
 
-    .options-left .nav-element {
-      margin-right: 10px;
-    }
-
-    .options-right .nav-element {
-      margin-left: 10px;
-    }
-
     .line {
       display: none;
     }
