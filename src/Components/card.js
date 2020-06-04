@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const CardStyled = styled.div`
   width: 100%;
+  height: auto;
   background: white;
   border-radius: 15px;
   position: relative;
@@ -42,11 +43,15 @@ export const CardStyled = styled.div`
     line-height: 1.6em;
     font-weight: 700;
   }
+
+  @media (min-width: 1200px) {
+    margin-top: ${props => props.marginTop};
+  }
 `;
 
-function Card({ icon, title, description }) {
+function Card({ icon, title, description, marginTop }) {
   return (
-    <CardStyled>
+    <CardStyled marginTop={marginTop}>
       <div className="icon">
         <img src={icon} alt={title} />
       </div>

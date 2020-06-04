@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import BtnCta from "./btnCta";
 import bgBoostMobile from "../images/bg-boost-mobile.svg";
+import bgBoostDesktop from "../images/bg-boost-desktop.svg";
 
 export const SectionStyled = styled.div`
   height: 300px;
@@ -10,6 +11,7 @@ export const SectionStyled = styled.div`
   align-items: center;
   text-align: center;
   background-image: url(${props => props.image});
+  background-size: cover;
   .content {
     width: 100%;
     display: flex;
@@ -22,11 +24,15 @@ export const SectionStyled = styled.div`
     font-size: 1.5em;
     color: white;
   }
+
+  @media (min-width: 1200px) {
+    background-image: url(${props => props.imageDesktop});
+  }
 `;
 
 function Section() {
   return (
-    <SectionStyled image={bgBoostMobile}>
+    <SectionStyled image={bgBoostMobile} imageDesktop={bgBoostDesktop}>
       <div className="content">
         <p className="text">
           <strong>Boost your links today</strong>

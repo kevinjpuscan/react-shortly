@@ -5,6 +5,10 @@ export const WrapperStyled = styled.div`
   max-width: 1312px;
   margin: auto;
   padding: 0 1rem;
+
+  @media (min-width: 1200px) {
+    padding: 0 160px;
+  }
 `;
 
 function Wrapper({ children }) {

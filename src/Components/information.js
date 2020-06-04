@@ -27,6 +27,23 @@ export const InformationStyled = styled.div`
     line-height: 1.5em;
     font-weight: bold;
   }
+
+  @media (min-width: 1200px) {
+    .description {
+      width: 50%;
+      margin: auto;
+      font-size: 1.1em;
+      font-weight: 900;
+    }
+    h1 {
+      font-size: 2.5em;
+    }
+    .card-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 30px;
+    }
+  }
 `;
 
 function Information() {
@@ -48,12 +65,15 @@ function Information() {
         mean a thing. Branded links help instil confidence in your content."
           />
           <Card
+            marginTop="6em"
             icon={icon02}
             title="Detailed Records"
             description="Gain insights into who is clicking your links. Knowing when and where 
             people engage with your content helps inform better decisions."
           />
           <Card
+            marginTop="7em"
+            className="margin-2"
             icon={icon03}
             title="Fully Customizable"
             description="Improve brand awareness and content discoverability through customizable 

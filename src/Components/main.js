@@ -40,6 +40,43 @@ export const MainStyled = styled.div`
   .btn-content {
     margin: 1.9em 0em;
   }
+
+  @media (min-width: 1200px) {
+    .content {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      grid-template-rows: auto;
+      grid-column-gap: 30px;
+      height: auto;
+    }
+    .description-content {
+      margin-top: 7em;
+      grid-column: 1;
+      grid-row: 1;
+      text-align: left;
+    }
+
+    .description-content h1 {
+      font-size: 3em;
+    }
+
+    .description {
+      font-size: 1.3em;
+    }
+
+    .img-banner {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .img-banner {
+      margin-top: 7em;
+    }
+    img {
+      width: 120%;
+      margin-left: 0px;
+    }
+  }
 `;
 
 function Main() {

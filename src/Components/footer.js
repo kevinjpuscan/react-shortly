@@ -9,7 +9,7 @@ import iconInstagram from "../images/icon-instagram.svg";
 
 export const FooterStyled = styled.div`
   background: var(--very-dark-violet);
-
+  margin-bottom: 0px;
   .content {
     display: grid;
   }
@@ -41,43 +41,71 @@ export const FooterStyled = styled.div`
     padding: 2em 5em;
     margin-bottom: 10px;
   }
+
+  @media (min-width: 1200px) {
+    padding-bottom: 3em;
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 3fr 1.5fr;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 2em;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: flex-start;
+      padding: 3em 2em;
+      justify-content: space-between;
+    }
+  }
 `;
 
 function Footer() {
   return (
     <FooterStyled>
       <Wrapper>
-        <div className="logo">
-          <img src={logoWhite} alt="logo-white" />
-        </div>
-
-        <div className="content">
-          <div className="group-detail">
-            <p className="detail-title">
-              <strong>Features</strong>
-            </p>
-            <p className="detail-element">Link Shortening</p>
-            <p className="detail-element">Branded Links</p>
-            <p className="detail-element">Analytics</p>
+        <div className="footer-grid">
+          <div className="logo">
+            <img src={logoWhite} alt="logo-white" />
           </div>
-          <div className="group-detail">
-            <p className="detail-title">
-              <strong>Resources</strong>
-            </p>
-            <p className="detail-element">Blog</p>
-            <p className="detail-element">Developers</p>
-            <p className="detail-element">Suport</p>
+          <div className="content">
+            <div className="group-detail">
+              <p className="detail-title">
+                <strong>Features</strong>
+              </p>
+              <p className="detail-element">Link Shortening</p>
+              <p className="detail-element">Branded Links</p>
+              <p className="detail-element">Analytics</p>
+            </div>
+            <div className="group-detail">
+              <p className="detail-title">
+                <strong>Resources</strong>
+              </p>
+              <p className="detail-element">Blog</p>
+              <p className="detail-element">Developers</p>
+              <p className="detail-element">Suport</p>
+            </div>
+            <div className="group-detail">
+              <p className="detail-title">
+                <strong>Company</strong>
+              </p>
+              <p className="detail-element">About</p>
+              <p className="detail-element">Our Team</p>
+              <p className="detail-element">Careers</p>
+              <p className="detail-element">Contact</p>
+            </div>
           </div>
-          <div className="group-detail">
-            <p className="detail-title">
-              <strong>Company</strong>
-            </p>
-            <p className="detail-element">About</p>
-            <p className="detail-element">Our Team</p>
-            <p className="detail-element">Careers</p>
-            <p className="detail-element">Contact</p>
-          </div>
-
           <div className="social-links">
             <span>
               <img src={iconFacebook} alt="icon-facebook" />
