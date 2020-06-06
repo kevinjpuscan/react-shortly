@@ -6,6 +6,7 @@ import Form from "./form";
 import icon01 from "../images/icon-detailed-records.svg";
 import icon02 from "../images/icon-detailed-records.svg";
 import icon03 from "../images/icon-fully-customizable.svg";
+import ResultList from "./resultList";
 
 export const InformationStyled = styled.div`
   text-align: center;
@@ -51,6 +52,7 @@ function Information() {
     <InformationStyled>
       <Wrapper>
         <Form />
+        <ResultList />
         <h1>Advanced Statistics</h1>
         <p className="description">
           Track how your links are performing across the web with our advanced
