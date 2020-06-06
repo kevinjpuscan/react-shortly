@@ -1,19 +1,21 @@
 {
   "files": {
     "main.css": "/react-shortly/static/css/main.d581cfa9.chunk.css",
-    "main.js": "/react-shortly/static/js/main.037328e8.chunk.js",
-    "main.js.map": "/react-shortly/static/js/main.037328e8.chunk.js.map",
+    "main.js": "/react-shortly/static/js/main.0babb840.chunk.js",
+    "main.js.map": "/react-shortly/static/js/main.0babb840.chunk.js.map",
     "runtime-main.js": "/react-shortly/static/js/runtime-main.4ec272da.js",
     "runtime-main.js.map": "/react-shortly/static/js/runtime-main.4ec272da.js.map",
-    "static/js/2.6d25c49e.chunk.js": "/react-shortly/static/js/2.6d25c49e.chunk.js",
-    "static/js/2.6d25c49e.chunk.js.map": "/react-shortly/static/js/2.6d25c49e.chunk.js.map",
+    "static/js/2.29bcd9d7.chunk.js": "/react-shortly/static/js/2.29bcd9d7.chunk.js",
+    "static/js/2.29bcd9d7.chunk.js.map": "/react-shortly/static/js/2.29bcd9d7.chunk.js.map",
     "index.html": "/react-shortly/index.html",
-    "precache-manifest.a74fff340ae16b34635ca142def07067.js": "/react-shortly/precache-manifest.a74fff340ae16b34635ca142def07067.js",
+    "precache-manifest.2a635ddaac8be74a986ac2094140bae3.js": "/react-shortly/precache-manifest.2a635ddaac8be74a986ac2094140bae3.js",
     "service-worker.js": "/react-shortly/service-worker.js",
     "static/css/main.d581cfa9.chunk.css.map": "/react-shortly/static/css/main.d581cfa9.chunk.css.map",
-    "static/js/2.6d25c49e.chunk.js.LICENSE.txt": "/react-shortly/static/js/2.6d25c49e.chunk.js.LICENSE.txt",
+    "static/js/2.29bcd9d7.chunk.js.LICENSE.txt": "/react-shortly/static/js/2.29bcd9d7.chunk.js.LICENSE.txt",
     "static/media/bg-boost-desktop.svg": "/react-shortly/static/media/bg-boost-desktop.dc8b886b.svg",
     "static/media/bg-boost-mobile.svg": "/react-shortly/static/media/bg-boost-mobile.47ef0c28.svg",
+    "static/media/bg-shorten-desktop.svg": "/react-shortly/static/media/bg-shorten-desktop.a82de60e.svg",
+    "static/media/bg-shorten-mobile.svg": "/react-shortly/static/media/bg-shorten-mobile.4a7a7f61.svg",
     "static/media/icon-detailed-records.svg": "/react-shortly/static/media/icon-detailed-records.e3d9caa9.svg",
     "static/media/icon-facebook.svg": "/react-shortly/static/media/icon-facebook.7febcff9.svg",
     "static/media/icon-fully-customizable.svg": "/react-shortly/static/media/icon-fully-customizable.cc099cea.svg",
@@ -27,8 +29,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4ec272da.js",
-    "static/js/2.6d25c49e.chunk.js",
+    "static/js/2.29bcd9d7.chunk.js",
     "static/css/main.d581cfa9.chunk.css",
-    "static/js/main.037328e8.chunk.js"
+    "static/js/main.0babb840.chunk.js"
   ]
 }
