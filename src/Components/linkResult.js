@@ -32,15 +32,15 @@ export const LinkResultStyled = styled.div`
 
   @media (min-width: 1200px) {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     grid-column-gap: 40px;
 
     .url-header {
     }
     .url-content {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      grid-column-gap: 10px;
+      grid-template-columns: 2fr 1fr;
+      grid-column-gap: 20px;
       padding: 0 20px;
     }
     .short-url {

@@ -73,7 +73,10 @@ export const FormStyled = styled.div`
       grid-column-gap: 44px;
       padding: 44px;
     }
-
+    .alert {
+      grid-column: 1;
+      grid-row: 2;
+    }
     .input-link {
       width: calc(100%-40px);
       height: 50px;
