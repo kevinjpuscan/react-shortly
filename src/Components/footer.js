@@ -28,6 +28,11 @@ export const FooterStyled = styled.div`
 
   .detail-element {
     line-height: 1.2em;
+    cursor: pointer;
+  }
+
+  .detail-element:hover {
+    color: var(--cyan);
   }
   .logo {
     text-align: center;
@@ -40,6 +45,10 @@ export const FooterStyled = styled.div`
     justify-content: space-between;
     padding: 2em 5em;
     margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .social-link img:hover {
+    fill: var(--cyan);
   }
 
   @media (min-width: 1200px) {
@@ -53,7 +62,7 @@ export const FooterStyled = styled.div`
     .content {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      padding-top: 2em;
+      padding-top: 1.5em;
     }
 
     .logo {
@@ -62,6 +71,14 @@ export const FooterStyled = styled.div`
       align-items: flex-start;
     }
 
+    .detail-title {
+      text-align: left;
+      font-size: 1.1em;
+    }
+
+    .detail-element {
+      text-align: left;
+    }
     .social-links {
       display: flex;
       align-items: flex-start;
@@ -107,16 +124,16 @@ function Footer() {
             </div>
           </div>
           <div className="social-links">
-            <span>
+            <span className="social-link">
               <img src={iconFacebook} alt="icon-facebook" />
             </span>
-            <span>
+            <span className="social-link">
               <img src={iconTwitter} alt="icon-twitter" />
             </span>
-            <span>
+            <span className="social-link">
               <img src={iconPinterest} alt="icon-pinterest" />
             </span>
-            <span>
+            <span className="social-link">
               <img src={iconInstagram} alt="icon-instagram" />
             </span>
           </div>

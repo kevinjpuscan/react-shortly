@@ -27,6 +27,11 @@ export const SectionStyled = styled.div`
 
   @media (min-width: 1200px) {
     background-image: url(${props => props.imageDesktop});
+    height: auto;
+    padding: 2em 0em 4em 0em;
+    .text {
+      font-size: 2.2em;
+    }
   }
 `;
 

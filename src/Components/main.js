@@ -9,6 +9,7 @@ export const MainStyled = styled.div`
   font-family: "poppins";
   text-align: center;
   padding-bottom: 8em;
+  background: white;
 
   .content {
     display: grid;
@@ -50,7 +51,7 @@ export const MainStyled = styled.div`
       height: auto;
     }
     .description-content {
-      margin-top: 7em;
+      margin-top: 9em;
       grid-column: 1;
       grid-row: 1;
       text-align: left;
@@ -70,7 +71,7 @@ export const MainStyled = styled.div`
     }
 
     .img-banner {
-      margin-top: 7em;
+      margin-top: 9em;
     }
     img {
       width: 120%;

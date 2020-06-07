@@ -9,6 +9,7 @@ export const CardStyled = styled.div`
   position: relative;
   margin: 5em 0em;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.035);
+  z-index: 500;
 
   .content {
     padding: 3em 1.5em 2em 1.5em;
@@ -41,17 +42,49 @@ export const CardStyled = styled.div`
     margin: 0;
     font-size: 0.9em;
     line-height: 1.6em;
-    font-weight: 700;
+    font-weight: 600;
   }
-
+  @media (max-width: 1200px) {
+    &::before {
+      content: "";
+      position: absolute;
+      background: var(--cyan);
+      width: ${props => (props.line ? "0.45em" : "0")};
+      height: 50px;
+      top: ${props => (props.line ? "-5em" : "0")};
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
   @media (min-width: 1200px) {
     margin-top: ${props => props.marginTop};
+    text-align: left;
+    height: min-content;
+
+    .icon {
+      left: 1.5em;
+      right: auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-color: var(--cyan);
+      border-style: solid;
+      border-width: 0 0 0.4em 0;
+      height: 1em;
+      top: ${props => (props.line ? "50px" : "0")};
+      left: ${props => (props.line ? "-30px" : "0")};
+      width: ${props => (props.line ? "30px" : "0")};
+    }
   }
 `;
 
-function Card({ icon, title, description, marginTop }) {
+function Card({ icon, title, description, marginTop, line }) {
+  console.log(line);
   return (
-    <CardStyled marginTop={marginTop}>
+    <CardStyled marginTop={marginTop} line={line}>
       <div className="icon">
         <img src={icon} alt={title} />
       </div>

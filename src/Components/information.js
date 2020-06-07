@@ -65,6 +65,7 @@ function Information() {
             title="Brand Recognition"
             description="Boost your brand recognition with each click. Generic links don’t 
         mean a thing. Branded links help instil confidence in your content."
+            line={false}
           />
           <Card
             marginTop="6em"
@@ -72,14 +73,16 @@ function Information() {
             title="Detailed Records"
             description="Gain insights into who is clicking your links. Knowing when and where 
             people engage with your content helps inform better decisions."
+            line={true}
           />
           <Card
-            marginTop="7em"
+            marginTop="8em"
             className="margin-2"
             icon={icon03}
             title="Fully Customizable"
             description="Improve brand awareness and content discoverability through customizable 
             links, supercharging audience engagement."
+            line={true}
           />
         </div>
       </Wrapper>
