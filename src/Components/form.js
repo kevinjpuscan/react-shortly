@@ -135,6 +135,7 @@ class Form extends React.Component {
         <div className="content-form">
           <input
             className="input-link"
+            name="input-link"
             placeholder="Shorten a link here"
             value={this.state.text}
             onChange={this.handleChange}
