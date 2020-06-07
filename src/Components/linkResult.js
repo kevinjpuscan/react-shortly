@@ -20,10 +20,12 @@ export const LinkResultStyled = styled.div`
     text-align: left;
     padding: 0.8em 0em;
     color: var(--cyan);
+    margin: auto 0px;
   }
   .btn-copied {
     padding: 0.5em;
-    background: var(--cyan);
+    background: ${props =>
+      props.isCopy ? "var(--dark-violet)" : "var(--cyan)"};
     color: white;
     border-radius: 10px;
     font-weight: 700;
@@ -33,7 +35,7 @@ export const LinkResultStyled = styled.div`
   @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    grid-column-gap: 40px;
+    grid-column-gap: 5px;
 
     .url-header {
     }
@@ -58,18 +60,38 @@ export const LinkResultStyled = styled.div`
   }
 `;
 
-function LinkResult({ url, shortUrl, isCopy }) {
-  return (
-    <LinkResultStyled>
-      <div className="url-header">{url}</div>
-      <div className="url-content">
-        <div className="short-url">{shortUrl}</div>
-        <div className="content-btn-copied">
-          <div className="btn-copied">{isCopy ? "Copied!" : "Copy"}</div>
+class LinkResult extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isCopy: false
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick = () => {
+    let text = document.createElement("input");
+    text.setAttribute("value", `https://rel.ink/${this.props.shortUrl}`);
+    document.body.appendChild(text);
+    text.select();
+    document.execCommand("copy");
+    document.body.removeChild(text);
+    this.setState({ isCopy: true });
+  };
+  render() {
+    return (
+      <LinkResultStyled isCopy={this.state.isCopy}>
+        <div className="url-header">{this.props.url}</div>
+        <div className="url-content">
+          <div className="short-url">https://rel.ink/{this.props.shortUrl}</div>
+          <div className="content-btn-copied">
+            <div className="btn-copied" onClick={this.handleClick}>
+              {this.state.isCopy ? "Copied!" : "Copy"}
+            </div>
+          </div>
         </div>
-      </div>
-    </LinkResultStyled>
-  );
+      </LinkResultStyled>
+    );
+  }
 }
 
 export default LinkResult;

@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import bgShortenMobile from "../images/bg-shorten-mobile.svg";
 import bgShortenDesktop from "../images/bg-shorten-desktop.svg";
+import { connect } from "react-redux";
+import * as types from "../store/types";
 
 export const FormStyled = styled.div`
   width: 100%;
@@ -98,6 +100,7 @@ class Form extends React.Component {
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.getShortLink = this.getShortLink.bind(this);
   }
 
   handleChange = event => {
@@ -108,7 +111,21 @@ class Form extends React.Component {
     if (this.state.text.replace(/ /g, "") === "") {
       this.setState({ alert: "Please add a Link" });
     } else {
-      alert(this.state.text);
+      this.getShortLink(this.state.text);
+    }
+  };
+
+  getShortLink = async url => {
+    let result = await fetch("https://rel.ink/api/links/", {
+      method: "POST", // or 'PUT'
+      body: JSON.stringify({ url }), // data can be `string` or {object}!
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    if (Number(result.status) === 201) {
+      let shortLink = await result.json();
+      this.props.dispatch({ type: types.ADD_LINK, payload: shortLink });
     }
   };
 
@@ -133,4 +150,19 @@ class Form extends React.Component {
   }
 }
 
-export default Form;
+const mapStateToProps = state => {
+  return {
+    shortLinks: state.shortLinks
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    dispatch
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Form);
